@@ -31,7 +31,7 @@ function setCurrentWeather() {
     document.querySelector('.icon1').src = `${icons[myWeaObj[8].weather[0].main.toUpperCase()]}`;
     document.querySelector('.icon2').src = `${icons[myWeaObj[16].weather[0].main.toUpperCase()]}`;
     document.querySelector('.icon3').src = `${icons[myWeaObj[24].weather[0].main.toUpperCase()]}`;
-    //setLang(document.querySelector('.droplist').selectedOptions[0].innerHTML);
+    setLang(document.querySelector('.droplist').selectedOptions[0].innerHTML);
 
     document.querySelector('.restore_img').classList.toggle('restore_img-animation');
     document.querySelector('.restore_btn').classList.toggle('restore_btn-animation');
