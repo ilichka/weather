@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-image: url('../assets/img/bk0.jpg');
+}
+
+.btn {
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.same_header {
+    width: 20%;
+    height: 50%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+}
+
+.restore_btn {
+    width: 50px;
+    height: 50px;
+    /*background-color: grey;*/
+    margin-right: 10px;
+    /*background-image: url(../assets/img/landscape.svg);*/
+    background-size: cover;
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.language_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    border-radius: 5px;
+}
+
+.temperature-btns_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.fahrenheit_btn, .celsius_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    user-select: none;
+}
+
+.fahrenheit_btn {
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    border-radius: 5px 0 0 5px;
+}
+
+.celsius_btn {
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    border-radius: 0 5px 5px 0;
+}
+
+.search_str {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.input_city {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border: 1px solid rgba(128, 128, 128, 0.8);
+    border-radius: 5px;
+}
+
+.input_text {
+    height: 48px;
+    width: 270px;
+    border: 0;
+    outline: none;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(128, 128, 128, 0);
+    margin-left: 5px;
+}
+
+.search_btn {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.8);;
+    border-radius: 5px;
+    color: white;
+    font-size: 25px;
+    user-select: none;
+}
+
+.droplist {
+    width: 100px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.8);
+    border: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.inactive {
+    opacity: 0.4;
+}
+
+.mic {
+    height: 20px;
+    width: 20px;
+}
+
+.mic_img {
+    height: 100%;
+    width: 100%;
+}
+
+.restore_img {
+    height: 50%;
+    width: 50%;
+    /*animation: rot 1s infinite linear;*/
+    /*transition: transform 1s linear;*/
+}
+
+.restore_img-animation {
+    /*transform: rotate(180deg);*/
+    animation: rot 1s infinite linear;
+}
+
+.restore_btn-animation {
+    background-color: green;
+    opacity: 0.7;
+}
+
+@keyframes rot {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.input_text::placeholder {
+    color: white;
+}
+
+main {
+    margin-left: 150px;
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+}
+
+.weather {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.city_name {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.current_date {
+    display: flex;
+    flex-direction: row;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.current-weather_temperature {
+    grid-area: temperature;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    font-size: 200px;
+}
+
+.current-weather-icon_wrapper {
+    grid-area: icon;
+}
+
+.current-weather_info {
+    grid-area: info;
+}
+
+.current-weather_wrapper {
+    display: grid;
+    grid-template-areas: "temperature icon" "temperature info";
+    height: 50%;
+    width: 650px;
+}
+
+.current-weather_info {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.current-weather-icon_wrapper {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.close-weather {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.close-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.next1, .next2, .next3 {
+    margin-right: 200px;
+}
+
+.day-name {
+    font-size: 40px;
+}
+
+.close-temperature {
+    font-size: 60px;
+}
+
+.map {
+    height: 85vh;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.map_area {
+    width: 400px;
+    height: 500px;
+}
+
+.Longitude, .Latitude {
+    align-self: flex-start;
+    margin-top: 20px;
+    font-size: 30px;
+    margin-left: 100px;
+}
+
+.short-day_name, .day_num, .month {
+    margin-right: 10px;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-left: 15px;
+    margin-top: -15px;
+}
+
+.current-weather_icon {
+    width: 220px;
+    height: 220px;
+}
+
+
+
+

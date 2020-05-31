@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="stylesheet" type="text/css" href="fancy%20weather/styles.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c43ff7a8-a7d1-42e6-ac6b-3bab78c8d1e8&lang=ru_RU" type="text/javascript"></script>
+    <meta charset="utf-8">
+</head>
+<body>
+<header>
+    <div class="controls same_header">
+        <div class="restore_btn btn">
+            <img class="restore_img" src="assets/img/restore.svg" alt="restore_img"/>
+        </div>
+        <div class="language_btn">
+            <select class="droplist">
+                <option class="option">En</option>
+                <option class="option">Ru</option>
+                <option class="option">Be</option>
+            </select>
+        </div>
+        <div class="temperature-btns_wrapper">
+            <div class="fahrenheit_btn btn">&#176F</div>
+            <div class="celsius_btn btn inactive">&#176C</div>
+        </div>
+    </div>
+    <div class="search_str same_header">
+        <div class="input_city">
+            <input class="input_text" onClick="this.select();" name="" type="text" placeholder="Search city">
+            <div class="mic">
+                <img class="mic_img" src="assets/img/mic.png" alt="restore_img"/>
+            </div>
+        </div>
+        <div class="search_btn btn">Search</div>
+    </div>
+</header>
+<main>
+    <div class="weather">
+        <div class="city_name"><!--Homel, Belarus--></div>
+        <div class="current_date">
+            <div class="short-day_name"></div>
+            <div class="day_num"></div>
+            <div class="month"></div>
+            <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span>
+        </div>
+        <div class="current-weather_wrapper">
+            <div class="current-weather_temperature translate"><!--12&#176--></div>
+            <div class="current-weather-icon_wrapper">
+                <img class="current-weather_icon">
+            </div>
+            <div class="current-weather_info">
+                <div class="summary"><!--OVERCAST--></div>
+                <div class="feels-like"><!--FEELS LIKE--></div>
+                <div class="wind"><!--WIND--></div>
+                <div class="humidity"><!--HUMIDITY--></div>
+            </div>
+        </div>
+        <div class="close-weather">
+            <div class="next1">
+                <div class="day-name day1">next1</div>
+                <div class="close-container">
+                    <div class="close-temperature temperature1 translate">5&#176</div>
+                    <div class="close-icon">
+                        <img class="icon1 weather-icon"/>
+                    </div>
+                </div>
+            </div>
+            <div class="next2">
+                <div class="day-name day2">next2</div>
+                <div class="close-container">
+                    <div class="close-temperature temperature2 translate">6&#176</div>
+                    <div class="close-icon">
+                        <img class="icon2 weather-icon"/>
+                    </div>
+                </div>
+            </div>
+            <div class="next3">
+                <div class="day-name day3">next3</div>
+                <div class="close-container">
+                    <div class="close-temperature temperature3 translate">7&#176</div>
+                    <div class="close-icon">
+                        <img class="icon3 weather-icon"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map">
+        <div class="map_area" id="map-id"></div>
+        <div class="Latitude">Latitude</div>
+        <div class="Longitude">Longitude</div>
+    </div>
+</main>
+<script src="fancy%20weather/Map.js" type="text/javascript"></script>
+<script src="fancy%20weather/index.js" type="module"></script>
+</body>
+</html>
