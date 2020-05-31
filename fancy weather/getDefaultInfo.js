@@ -19,7 +19,7 @@ async function getDefaultCityLocationObj() {
 
 async function getDefaultCityWeatherObj() {
     let apiKey = 'd0b9cf5011a1d4ea6ac31f2492fda53d';
-    let url = 'http://api.openweathermap.org/data/2.5/forecast' + '?' + 'lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
+    let url = 'https://api.openweathermap.org/data/2.5/forecast' + '?' + 'lat=' + latitude + '&lon=' + longitude + '&appid=' + apiKey;
     let response = await fetch(url);
     cityWeatherObj = await response.json();
     console.log(cityWeatherObj);
