@@ -2,11 +2,18 @@ import {locObj} from "./getCityLocation.js";
 import {weaObj} from "./getCityWeather.js";
 import {icons} from "./setDefaultWeather.js";
 import {background, rand, checkSame} from "./backgroundChange.js";
-import {days} from "./setDefaultParams.js";
+import {days, failure} from "./setDefaultParams.js";
 import {setLang} from "./changeLang.js";
 export {setCurrentWeather}
 
+let  failure1 = true;
+
 function setCurrentWeather() {
+     if(failure === failure1) {
++        document.querySelector('main').classList.remove('none');
++        document.querySelector('.controls').classList.remove('none')
++        failure1 = false;
++    }
     let myLocObj = locObj.results[0];
     let myWeaObj = weaObj.list;
     let day1 = new Date(myWeaObj[8].dt_txt.slice(0, 10));
