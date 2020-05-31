@@ -3,7 +3,7 @@ export {setDefaultParams}
 export {latitude, longitude, days, failure}
 
 
-let latitude, longitude, failure;
+let latitude, longitude, failure=true;
 let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 function setDefaultParams() {
     let currentDate = new Date();
@@ -13,7 +13,7 @@ function setDefaultParams() {
     document.querySelector('.day1').innerHTML = days[nextDay(currentDate.getDay() + 1)];
     document.querySelector('.day2').innerHTML = days[nextDay(currentDate.getDay() + 2)];
     document.querySelector('.day3').innerHTML = days[nextDay(currentDate.getDay() + 3)];
-    navigator.geolocation.getCurrentPosition(success, fail);
+    navigator.geolocation.getCurrentPosition(success);
 }
 
 function success(pos) {
@@ -22,6 +22,9 @@ function success(pos) {
     latitude = crd.latitude;
     longitude = crd.longitude;
 
+    document.querySelector('main').classList.remove('none');
+    document.querySelector('.controls').classList.remove('none');
+
     getDefaultCityLocationObj()/*.catch(e => console.log(`Error ${e}`));*/
     getDefaultCityWeatherObj()/*.catch(e => console.log(`Error ${e}`));*/
     /* console.log('Ur current position:');
@@ -29,11 +32,11 @@ function success(pos) {
      console.log(`longitude: ${crd.longitude}`);*/
 }
 
-function fail() {
+/*function fail() {
     failure = true;
     document.querySelector('main').classList.add('none');
     document.querySelector('.controls').classList.add('none')
-}
+}*/
 
 function nextDay(n) {
     if (n > 6) {

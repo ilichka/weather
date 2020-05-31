@@ -83,8 +83,8 @@ function setLang(lang) {
             document.querySelector('.summary').innerHTML = lang.summary.clear;
         }
     }
-    let feel = document.querySelector('.feels-like').innerHTML.split(' ')[2]
-    document.querySelector('.feels-like').innerHTML = lang.feelsLike + ': ' + feel.slice(0, feel-1)/* + '&#176'*/;
+    let feel = document.querySelector('.feels-like').innerHTML.split(' ')[2];
+    document.querySelector('.feels-like').innerHTML = lang.feelsLike + ': ' + feel.slice(0, feel.length-1) + '&#176';
     document.querySelector('.wind').innerHTML = lang.wind + ': ' + document.querySelector('.wind').innerHTML.split(' ')[1] + ' ' + document.querySelector('.wind').innerHTML.split(' ')[2];
     document.querySelector('.humidity').innerHTML = lang.humidity + ': ' + document.querySelector('.humidity').innerHTML.split(' ')[1];
     document.querySelectorAll('.day-name').forEach(key=>{

@@ -11,7 +11,7 @@ let  failure1 = true;
 function setCurrentWeather() {
     if(failure === failure1) {
         document.querySelector('main').classList.remove('none');
-        document.querySelector('.controls').classList.remove('none')
+        document.querySelector('.controls').classList.remove('none');
         failure1 = false;
     }
     let myLocObj = locObj.results[0];
