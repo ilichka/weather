@@ -6,7 +6,7 @@ let weaObj;
 async function getCityWeatherObj() {
     let apiKey = 'd0b9cf5011a1d4ea6ac31f2492fda53d';
     let city = document.querySelector('.input_text').value;
-    let url = 'https://api.openweathermap.org/data/2.5/forecast' + '?' + '&q=' + city + '&appid=' + apiKey;
+    let url = 'http://api.openweathermap.org/data/2.5/forecast' + '?' + '&q=' + city + '&appid=' + apiKey;
     let response = await fetch(url);
     weaObj = await response.json();
     console.log(weaObj.cod);
